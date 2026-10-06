@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DCOD — Music / Arts / Archive</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #000;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 100vh;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            width: 100%;
+            padding: 28px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            mix-blend-mode: difference;
+        }
+
+        .logo {
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        nav {
+            display: flex;
+            gap: 28px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: opacity 0.3s ease;
+        }
+
+        nav a:hover {
+            opacity: 0.4;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 120px 32px 100px;
+        }
+
+        .hero-content {
+            width: 100%;
+            max-width: 1200px;
+            text-align: center;
+        }
+
+        .number {
+            font-size: 11px;
+            letter-spacing: 3px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .artist {
+            font-size: clamp(14px, 2vw, 20px);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .track-title {
+            font-size: clamp(42px, 9vw, 110px);
+            line-height: 0.9;
+            font-weight: 700;
+            letter-spacing: -5px;
+            text-transform: uppercase;
+        }
+
+        .status {
+            margin-top: 30px;
+            font-size: 10px;
+            letter-spacing: 3px;
+            color: #666;
+            text-transform: uppercase;
+        }
+
+        /* =========================
+           PLAY BUTTON
+        ========================= */
+
+        .play-button {
+            margin: 45px auto 0;
+            width: 58px;
+            height: 58px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .play-button:hover {
+            background: #fff;
+            color: #000;
+            transform: scale(1.08);
+        }
+
+        .play-icon {
+            font-size: 16px;
+            margin-left: 3px;
+        }
+
+        /* =========================
+           DIVIDER
+        ========================= */
+
+        .divider {
+            width: calc(100% - 64px);
+            max-width: 1200px;
+            height: 1px;
+            background: #222;
+            margin: 0 auto;
+        }
+
+        /* =========================
+           INTRO
+        ========================= */
+
+        .intro {
+            min-height: 70vh;
+            padding: 120px 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .intro-text {
+            max-width: 850px;
+            font-size: clamp(28px, 5vw, 62px);
+            line-height: 1.05;
+            letter-spacing: -2px;
+            text-align: center;
+        }
+
+        .intro-text span {
+            color: #444;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 40px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #222;
+        }
+
+        footer p {
+            font-size: 10px;
+            color: #555;
+            letter-spacing: 1px;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 22px 20px;
+            }
+
+            nav {
+                gap: 15px;
+            }
+
+            nav a {
+                font-size: 9px;
+                letter-spacing: 0.8px;
+            }
+
+            .hero {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .track-title {
+                letter-spacing: -3px;
+            }
+
+            .divider {
+                width: calc(100% - 40px);
+            }
+
+            .intro {
+                padding: 100px 20px;
+            }
+
+            footer {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+            DCOD
+        </div>
+
+        <nav>
+            <a href="#music">Music</a>
+            <a href="#arts">Arts</a>
+            <a href="#archive">Archive</a>
+        </nav>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <main>
+
+        <section class="hero" id="music">
+
+            <div class="hero-content">
+
+                <div class="number">
+                    001
+                </div>
+
+                <div class="artist">
+                    Yung Mean
+                </div>
+
+                <h1 class="track-title">
+                    Suri<br>Vmoshpit
+                </h1>
+
+                <div class="status">
+                    Exclusive Transmission
+                </div>
+
+                <div class="play-button" onclick="playMusic()">
+
+                    <div class="play-icon" id="playIcon">
+                        ▶
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- DIVIDER -->
+
+        <div class="divider"></div>
+
+
+        <!-- INTRO -->
+
+        <section class="intro" id="arts">
+
+            <div class="intro-text">
+
+                MUSIC IS EVERYWHERE.
+                <span>
+                    SOME THINGS EXIST ONLY HERE.
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- ARCHIVE -->
+
+        <section class="intro" id="archive">
+
+            <div class="intro-text">
+
+                <span>DCOD</span><br>
+                MUSIC / ARTS / ARCHIVE
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 DCOD
+        </p>
+
+        <p>
+            MUSIC / ARTS / ARCHIVE
+        </p>
+
+    </footer>
+
+
+    <script>
+
+        let playing = false;
+
+        function playMusic() {
+
+            const icon = document.getElementById("playIcon");
+
+            playing = !playing;
+
+            if (playing) {
+
+                icon.innerHTML = "Ⅱ";
+
+            } else {
+
+                icon.innerHTML = "▶";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
