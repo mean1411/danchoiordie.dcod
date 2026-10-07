@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BEATS — DCOD</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #000;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 100vh;
+        }
+
+        .page {
+            width: 100%;
+            max-width: 1000px;
+            margin: auto;
+            padding: 32px 24px 100px;
+        }
+
+        /* TOP */
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 140px;
+        }
+
+        .logo {
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .back {
+            color: #777;
+            text-decoration: none;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .back:hover {
+            color: #fff;
+        }
+
+        /* TITLE */
+
+        .title {
+            font-size: clamp(60px, 15vw, 150px);
+            font-weight: 700;
+            letter-spacing: -7px;
+            line-height: 0.8;
+            margin-bottom: 100px;
+        }
+
+        /* INTRO */
+
+        .intro {
+            color: #555;
+            font-size: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+
+        /* BEAT LIST */
+
+        .beat-list {
+            border-top: 1px solid #222;
+        }
+
+        .beat {
+            border-bottom: 1px solid #222;
+            padding: 28px 0;
+        }
+
+        .beat-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .beat-number {
+            color: #555;
+            font-size: 10px;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .beat-name {
+            font-size: clamp(26px, 5vw, 48px);
+            font-weight: 500;
+            letter-spacing: -2px;
+        }
+
+        .producer {
+            color: #666;
+            font-size: 10px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-top: 8px;
+        }
+
+        /* INFO */
+
+        .beat-info {
+            display: flex;
+            gap: 30px;
+            margin-top: 24px;
+            color: #555;
+            font-size: 9px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        /* PLAYER */
+
+        .player {
+            margin-top: 25px;
+        }
+
+        audio {
+            width: 100%;
+            height: 32px;
+            filter: grayscale(1);
+        }
+
+        /* PRICE */
+
+        .bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .price {
+            color: #777;
+            font-size: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .status {
+            color: #444;
+            font-size: 9px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* FOOTER */
+
+        .footer {
+            margin-top: 140px;
+            color: #444;
+            font-size: 9px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            .page {
+                padding: 24px 18px 80px;
+            }
+
+            .top {
+                margin-bottom: 100px;
+            }
+
+            .title {
+                margin-bottom: 70px;
+            }
+
+            .beat {
+                padding: 24px 0;
+            }
+
+            .beat-info {
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+
+            .bottom {
+                align-items: flex-start;
+                gap: 15px;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page">
+
+        <!-- TOP -->
+
+        <div class="top">
+
+            <div class="logo">
+                DCOD
+            </div>
+
+            <a href="music.html" class="back">
+                ← Music
+            </a>
+
+        </div>
+
+
+        <!-- TITLE -->
+
+        <h1 class="title">
+            BEATS
+        </h1>
+
+
+        <!-- INTRO -->
+
+        <div class="intro">
+            Instrumentals / Production
+        </div>
+
+
+        <!-- BEAT LIST -->
+
+        <div class="beat-list">
+
+
+            <!-- BEAT 01 -->
+
+            <div class="beat">
+
+                <div class="beat-top">
+
+                    <div>
+
+                        <div class="beat-number">
+                            01
+                        </div>
+
+                        <div class="beat-name">
+                            UNTITLED 01
+                        </div>
+
+                        <div class="producer">
+                            PRODUCED BY YUNG MEAN
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BEAT INFORMATION -->
+
+                <div class="beat-info">
+
+                    <span>
+                        150 BPM
+                    </span>
+
+                    <span>
+                        E♭ MINOR
+                    </span>
+
+                    <span>
+                        TRAP
+                    </span>
+
+                </div>
+
+
+                <!-- AUDIO PLAYER -->
+
+                <div class="player">
+
+                    <audio controls preload="none">
+                        <source src="beat01.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+
+                </div>
+
+
+                <!-- PRICE -->
+
+                <div class="bottom">
+
+                    <div class="price">
+                        LICENSE — COMING SOON
+                    </div>
+
+                    <div class="status">
+                        AVAILABLE
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- FOOTER -->
+
+        <div class="footer">
+            DCOD — BEAT ARCHIVE
+        </div>
+
+    </div>
+
+</body>
+</html>
